@@ -4,6 +4,6 @@ get '/' do
 	erb :home
 end
 
-get '/pinchar' do
+post '/pinchar' do
 	':)'
 end
