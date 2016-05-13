@@ -2,7 +2,8 @@ class Tablero
 	def initialize 
         @tablero = Array.new(3) { Array.new(3) }
 		inicializa
-        @tablero[1][2] = "bomba"
+		
+        @tablero[1][2] = "b"
         @puntaje = 0
 	end
 
@@ -13,7 +14,7 @@ class Tablero
 	def inicializa
 		for i in 0..2
    			for j in 0..2
-				@tablero[i][j]=" "
+				@tablero[i][j]="&nbsp;"
 			end
    		end
  
@@ -24,7 +25,7 @@ class Tablero
 	end
 
 	def pinchar (x, y)
-		if @tablero[x][y] == "bomba"
+		if @tablero[x][y] == "b"
 			@mensaje = "Booooommm jajaja"
 		else 
 			if (@tablero[x][y] == "0")
@@ -48,22 +49,20 @@ class Tablero
 		@puntaje
     end
 	def dibuja
-		return '<table width="50%" height="50%" border="1">
-				<tr>
-					<td></td>
-					<td>&nbsp</td>
-					<td>&nbsp</td>
-				</tr>
-				<tr>
-					<td>&nbsp</td>
-					<td>&nbsp</td>
-					<td>&nbsp</td>
-				</tr>
-				<tr>
-					<td>&nbsp</td>
-					<td>&nbsp</td>
-					<td>&nbsp</td>
-				</tr>
-			</table>'	
+		html=  '<table width="50%" height="50%" border="1" cellpadding="1" cellspacing="1">'
+
+				for i in 0..2
+					html = html + '<tr>'
+   					for j in 0..2
+						if(i==1 and j==2)
+						html = html + '<td id="'+i.to_s+','+j.to_s+'" style="color:white">'+@tablero[i][j] +'</td>'
+						else 
+							html = html + '<td id="'+i.to_s+','+j.to_s+'">'+@tablero[i][j] +'</td>'
+						end
+					end
+					html = html + '/<tr>' 
+   				end
+				
+		html = html + '</table>'	
 	end
 end
