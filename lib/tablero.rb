@@ -33,7 +33,11 @@ class Tablero
 			else 
 			@puntaje += 1
 			@tablero[x][y] = "0"
-			@mensaje = "Sigue jugando :D"
+				if (@puntaje < 8)
+					@mensaje = "Sigue jugando :D"
+				else
+					@mensaje = "yupi!!! ganaste!"
+				end
 			end       
 		end
 
