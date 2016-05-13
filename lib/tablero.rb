@@ -11,7 +11,7 @@ class Tablero
 		if @tablero[x][y] == "bomba"
 			@mensaje = "Booooommm jajaja"
 		else
-			@mensaje = ":D"
+			@mensaje = "Sigue jugando :D"
 		end
 	end
 
