@@ -27,10 +27,14 @@ class Tablero
 		if @tablero[x][y] == "bomba"
 			@mensaje = "Booooommm jajaja"
 		else 
+			if (@tablero[x][y] == "0")
+				@mensaje= "ya selecciono esta posicion"
+			
+			else 
 			@puntaje += 1
 			@tablero[x][y] = "0"
 			@mensaje = "Sigue jugando :D"
-			            
+			end       
 		end
 
 		

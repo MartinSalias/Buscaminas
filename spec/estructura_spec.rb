@@ -37,6 +37,14 @@ describe "Estructura" do
 		tablero.pinchar 0,0
 		tablero.get(0, 0).should=="0" 	
 	end
+
+	it "verifica jugada repetida" do
+	
+		tablero = Tablero.new
+		tablero.pinchar 0,0
+		tablero.pinchar(0,0).should=="ya selecciono esta posicion"
+		
+	end
 	
 end
 
