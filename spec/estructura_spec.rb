@@ -26,6 +26,12 @@ describe "Estructura" do
 				</tr>
 			</table>'
 	end
+
+	it "inicializa tablero" do
+		tablero = Tablero.new
+		tablero.get(0, 0).should==" " 	
+	end
+	
 end
 
 

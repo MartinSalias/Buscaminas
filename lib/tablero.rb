@@ -1,9 +1,24 @@
 class Tablero
 	def initialize 
         @tablero = Array.new(3) { Array.new(3) }
+		inicializa
         @tablero[1][2] = "bomba"
         @puntaje = 0
 	end
+
+	def get x, y
+		@tablero[x][y] 
+	end
+	
+	def inicializa
+		for i in 0..2
+   			for j in 0..2
+				@tablero[i][j]=" "
+			end
+   		end
+ 
+	end
+	
 	def dimension
 		@tablero[1][2]
 	end
