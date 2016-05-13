@@ -5,4 +5,27 @@ describe "Estructura" do
 		tablero = Tablero.new
 		tablero.dimension.should == "bomba"
 	end
+
+	it "spike imprimir tablero" do
+		tablero = Tablero.new
+		tablero.dibuja.should== '<table width="50%" height="50%" border="1">
+				<tr>
+					<td>&nbsp</td>
+					<td>&nbsp</td>
+					<td>&nbsp</td>
+				</tr>
+				<tr>
+					<td>&nbsp</td>
+					<td>&nbsp</td>
+					<td>&nbsp</td>
+				</tr>
+				<tr>
+					<td>&nbsp</td>
+					<td>&nbsp</td>
+					<td>&nbsp</td>
+				</tr>
+			</table>'
+	end
 end
+
+
