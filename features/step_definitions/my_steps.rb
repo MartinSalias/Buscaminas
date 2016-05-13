@@ -13,5 +13,9 @@ When(/^presionar "(.*?)"$/) do |pinchar|
 end
 
 Then(/^Debe verse una carita feliz "(.*?)"$/) do |arg1|
+	last_response.body.should =~ /#{arg1}/m
 end
 
+Then(/^Debe decir "(.*?)"$/) do |arg1|
+	last_response.body.should =~ /#{arg1}/m
+end
