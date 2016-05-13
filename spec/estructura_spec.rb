@@ -9,7 +9,7 @@ describe "Estructura" do
 	
 	it "inicializa tablero" do
 		tablero = Tablero.new
-		tablero.get(0, 0).should==" " 	
+		tablero.get(0, 0).should=="&nbsp;" 	
 	end
 
 	it "cambia valor al pinchar" do
