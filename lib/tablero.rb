@@ -26,10 +26,14 @@ class Tablero
 	def pinchar (x, y)
 		if @tablero[x][y] == "bomba"
 			@mensaje = "Booooommm jajaja"
-		else
+		else 
 			@puntaje += 1
-			@mensaje = "Sigue jugando :D"            
+			@tablero[x][y] = "0"
+			@mensaje = "Sigue jugando :D"
+			            
 		end
+
+		
 	end
 
 	def resultado

@@ -31,6 +31,12 @@ describe "Estructura" do
 		tablero = Tablero.new
 		tablero.get(0, 0).should==" " 	
 	end
+
+	it "cambia valor al pinchar" do
+		tablero = Tablero.new
+		tablero.pinchar 0,0
+		tablero.get(0, 0).should=="0" 	
+	end
 	
 end
 
