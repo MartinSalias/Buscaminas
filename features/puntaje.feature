@@ -13,3 +13,7 @@ Scenario: Cuando el usuario sigue sumando puntos
 	 And Ingresar 1,1 como posicion
 	Then Debe verse una carita feliz "selecciono"
 	And Debe verse el puntaje "1"
+
+	Given El jugador ingresa al juego
+	When Ingresar 1,1 como posicion
+	Then la celda "1,1" debe mostrar "0"

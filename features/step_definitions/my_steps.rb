@@ -23,3 +23,14 @@ end
 Then(/^Debe verse el puntaje "(.*?)"$/) do |arg1|
 	last_response.body.should =~ /#{arg1}/m
 end
+
+Then(/^la celda "(.*?)" debe mostrar "(.*?)"$/) do |pos, valorCelda|
+	
+
+  	last_response.should have_xpath( "//td[@id=\"#{pos}\"]") do |td|
+    td.should contain( valorCelda )
+  end
+end
+
+
+
