@@ -4,3 +4,5 @@ Scenario: se debe poder ingresar datos y presionar Pinchar
 	When Ingresar 2,2 como posicion 
 	 And presionar "Pinchar"
 	Then Debe verse una carita feliz ":D"
+
+

@@ -25,3 +25,10 @@ end
 Then(/^I should see the image "(.*?)"$/) do |image_name|
   last_response.should have_xpath("//img[@src=\"#{image_name}\"]")
 end
+
+
+Given(/^posX tiene "(.*?)"$/) do |text|
+  last_response.should have_xpath( "//input[@id=\"posX\"]") do |input|
+  input.should contain( text )
+end
+end
